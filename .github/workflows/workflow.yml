@@ -5,7 +5,7 @@
 #   2. Project name:      tiny-claude-recycler
 #      Owner:             lucastononro
 #      Repository name:   tiny-claude-recycler
-#      Workflow filename: publish.yml
+#      Workflow filename: workflow.yml
 #      Environment name:  pypi
 #
 # How to release:
