@@ -1,6 +1,14 @@
 # tiny-claude-recycler
 
+[![PyPI](https://img.shields.io/pypi/v/tiny-claude-recycler.svg)](https://pypi.org/project/tiny-claude-recycler/)
+[![Python](https://img.shields.io/pypi/pyversions/tiny-claude-recycler.svg)](https://pypi.org/project/tiny-claude-recycler/)
+[![License](https://img.shields.io/pypi/l/tiny-claude-recycler.svg)](LICENSE)
+
 Rotate a pool of Claude **OAuth subscription tokens**. Fall back to a regular Anthropic API key when they're all rate-limited. Zero runtime dependencies.
+
+```bash
+pip install tiny-claude-recycler
+```
 
 ```python
 from claude_agent_sdk import query
@@ -83,9 +91,11 @@ For `claude_agent_sdk`, this caveat doesn't apply — every `query(...)` call sp
 - **Bedrock/Vertex/Foundry flags** route requests away from Anthropic entirely. Don't set those if you want the recycler to do anything.
 - **No proactive quota check.** Anthropic doesn't expose subscription consumption via the API; this lib reacts to failures, it can't predict them.
 
-## Install
+## Development
 
 ```bash
+git clone https://github.com/lucastononro/tiny-claude-recycler
+cd tiny-claude-recycler
 pip install -e ".[dev]"
 pytest
 ```
